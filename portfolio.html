@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prasad Mane</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-size: contain;
+    }
+
+    header {
+      background: #333;
+      color: #ff0808;
+      padding: 20px 0;
+      text-align: center;
+    }
+.container {
+    display: flex;
+    height: calc(100vh - 110px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 25%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #1abc9c;
+}
+
+/* CONTENT */
+.content {
+    width: 75%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* SECTION CONTROL */
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      width: 70%;
+      height: 4ch;
+      position: fixed;
+      bottom: 0;
+    }
+    .sidebar a:hover {
+    background-color: #96bc1a;
+    transform: scale(1.05);
+    letter-spacing: 1px;
+
+}
+
+      /* Apply hover effect only to images inside #skills */
+      #skills img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer; /* optional: shows pointer on hover */
+      }
+
+      #skills img:hover {
+        transform: scale(1.1); /* zoom effect */
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3); /* subtle shadow */
+      }
+      .certificate-box {
+          max-width: 900px;
+          margin: 30px auto;
+          padding: 20px;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+          text-align: center;
+}
+
+/* 4 columns grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* bottom 2 items centered */
+.cert-bottom {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-align: start;
+}
+
+/* images */
+.cert-item img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* text */
+.cert-item p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* hover effect */
+.cert-item img:hover {
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background: url('Ai\ image.jpeg') no-repeat center center fixed; background-size: cover;">
+
+  <header style="position: relative; display: flex; align-items: center;">
+
+    <marquee direction="right" style="width: 450px; overflow: hidden; color: rgb(255, 82, 186);">
+      Welcome to Prasad's Portfolio !
+    </marquee>
+    <img src="Prasad.html.jpeg" style="height: 50px; width: 50px; margin-left: 1vh;">
+    <h1 style="position: absolute; left: 50%; transform: translateX(-50%);">
+      Prasad Mane
+    </h1>
+
+  </header>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+
+        <a href="#" onclick="showSection('resume'); return false;">Resume</a>
+        <a href="#" onclick="showSection('about'); return false;">About Me</a>
+        <a href="#" onclick="showSection('career goal'); return false;">Career Goal</a>
+        <a href="#" onclick="showSection('skills'); return false;">Skills</a>
+        <a href="#" onclick="showSection('certificate'); return false;">Certificates</a>
+        <a href="#" onclick="showSection('projects'); return false;">Projects</a>
+        <a href="#" onclick="showSection('contact'); return false;">Contact</a>
+        <a href="#" onclick="showSection('location'); return false;">Location</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <div id="resume" class="section active" style="display:flex; justify-content:center; align-items:center; min-height:80vh; ">
+
+        <center style="border-color: rgb(43, 180, 93); border-width: 10px; border-style: dotted; border-radius: 4vh;">
+    <div style="background:linear-gradient(135deg,#ffffff,#f3f3f3);  
+                padding:80px 80px; border-radius:20px; 
+                text-align:center; 
+                box-shadow:0 10px 30px rgba(0,0,0,0.25); 
+                max-width: 320px; width:100%;">
+
+        <!-- Profile Image -->
+        <img src="Prasad.html.jpeg" 
+             style="width:110px; height:110px; border-radius:50%; 
+                    border:4px solid #ff7e5f; margin-bottom:15px; 
+                    object-fit:cover; box-shadow:0 6px 15px rgba(0,0,0,0.2);">
+        <h2 style="margin:8px 0; font-size:24px; color:#333;">
+            📄 My Resume
+        </h2>
+        <p style="color:#27ae60; margin:8px 0 20px; font-size:15px;">
+            Download my resume below
+        </p>
+        <a href="Resume.pdf" download style="display:inline-block; padding:12px 22px; 
+                  background:linear-gradient(45deg,#ff7e5f,#feb47b); 
+                  color:#fff; text-decoration:none; border-radius:25px;
+                  font-size:15px; font-weight:bold; 
+                  transition:0.3s; 
+                  box-shadow:0 5px 15px rgba(0,0,0,0.3);">⬇ Download Resume</a>
+
+    </div>
+
+</div>
+
+            <div id="about" class="section">
+                <center>
+            <div style="max-width:700px; padding:25px 30px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.2); text-align:center;">
+
+            <h2 style="margin-bottom:15px; font-size:28px; letter-spacing:1px;">
+                ✨ About Me
+            </h2>
+
+            <p style="font-size:18px; line-height:1.6; margin:0;">
+                I am Prasad, a passionate Software Engineering student with a strong interest in building efficient and user-friendly applications. I enjoy learning new technologies and improving my coding skills through real-world projects.
+            </p>
+
+        </div>
+      </center>
+    </div>
+
+            <div id="career goal" class="section">
+                <center>
+            <div style="max-width:700px; padding:25px 30px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.2); text-align:center;">
+
+            <h2 style="margin-bottom:15px; font-size:28px; letter-spacing:1px;">
+                ✨ My Career Goal
+            </h2>
+
+            <p style="font-size:18px; line-height:1.6; margin:0;">
+                To build a strong career in software engineering by developing efficient, user-friendly, and innovative applications. I aim to continuously improve my technical and problem-solving skills while contributing to the growth of an organization.
+            </p>
+
+        </div>
+      </center>
+    </div>
+
+
+        
+       
+  <div id="skills" class="section" style="max-width: 1000px; margin:30px auto; padding:20px; background: white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+
+    <h2 style="text-align:center; color:#2c3e50; margin-bottom:25px;">
+      My Skills
+    </h2>
+
+    <div style="display:grid; grid-template-columns: repeat(2, 1fr); grid-gap:30px; justify-items:center; align-items:start;">
+
+      <!-- Row 1 -->
+      <div style="text-align:center;">
+        <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+          💻 Web Development (HTML, CSS, C, Python)
+        </li>
+        <img src="Web Development (HTML, CSS, C, Python).jpeg" style="width:100%; max-width:250px; border-radius:10px;">
+      </div>
+
+      <div style="text-align:center;">
+        <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+          🤖 Learning New Technologies & AI Tools
+        </li>
+        <img src="new technology tools.png" style="width:100%; max-width:250px; border-radius:10px;">
+      </div>
+
+      <!-- Row 2 -->
+      <div style="text-align:center;">
+        <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+          🔧 Building Innovative Projects
+        </li>
+        <img src="Building innovative projects.png" style="width:100%; max-width:250px; border-radius:10px;">
+      </div>
+
+      <div style="text-align:center;">
+        <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+          📊 Problem Solving & Logical Thinking
+        </li>
+        <img src="Problem solving.png" style="width:100%; max-width:250px; border-radius:10px;">
+      </div>
+
+      <!-- Row 3 -->
+      <div style="text-align:center;">
+        <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+          🎨 Creative Designing
+        </li>
+        <img src="Creative designing.png" style="width:100%; max-width:250px; border-radius:10px;">
+      </div>
+
+      <div style="text-align:center;">
+        <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+          📚 Continuous Learning & Self-Improvement
+        </li>
+        <img src="Continuos learning.png" style="width:100%; max-width:250px; border-radius:10px;">
+      </div>
+
+    </div>
+
+    <!-- Single skill at bottom -->
+    <div style="text-align:center; margin-top:40px;">
+      <li style="list-style:none; background:#f0f8ff; padding:10px; border-radius:6px; font-size:16px; color:#333;">
+        🌱 Working on Real-life Applications
+      </li>
+      <img src="Working on real life application.png" style="width:100%; max-width:250px; border-radius:10px;">
+    </div>
+
+  </div>  
+
+
+
+                <div id="certificate" class="section">
+          <div class="certificate-box">
+
+            <h2>My Certification</h2>
+
+            <!-- 12 ITEMS GRID -->
+            <div class="cert-grid">
+
+              <div class="cert-item"><a href="Nasscom.jpeg" download><img src="Nasscom.jpeg"></a><p>Nasscom</p></div>
+              <div class="cert-item"><a href="Cloude 101.jpeg" download><img src="Cloude 101.jpeg"></a><p>Claude 101</p></div>
+              <div class="cert-item"><a href="AI fluancy Framework and foundation.jpeg" download><img src="AI fluancy Framework and foundation.jpeg"></a><p>AI Fluency - Framework & Foundations</p></div>
+              <div class="cert-item"><a href="AI fluancy for students.jpeg" download><img src="AI fluancy for students.jpeg"></a><p>AI Fluency for students</p></div>
+              <div class="cert-item"><a href="AI fiuany for nonprofit.jpeg" download><img src="AI fiuany for nonprofit.jpeg"></a><p>AI Fluency for nonprofits</p></div>
+              <div class="cert-item"><a href="Python essential 1.jpeg" download><img src="Python essential 1.jpeg"></a><p>Python Essential 1</p></div>
+              <div class="cert-item"><a href="Python essential 2.jpeg" download><img src="Python essential 2.jpeg"></a><p>Python Essential 2</p></div>
+              <div class="cert-item"><a href="introduction to modern AI.jpeg" download><img src="introduction to modern AI.jpeg"></a><p>Intoduction to modern AI</p></div>
+              <div class="cert-item"><a href="TKN.html.jpeg" download><img src="TKN.html.jpeg"></a><p>TKN Club bootcamp</p></div>
+              <div class="cert-item"><a href="Linux certificate.jpeg" download><img src="Linux certificate.jpeg"></a><p>Kali Linux Course - Mind Luster</p></div>
+              <div class="cert-item"><a href="Linux 2.jpeg" download><img src="Linux 2.jpeg"></a><p>Linux Course - Simplilearn</p></div>
+              <div class="cert-item"><a href="IYMC Certificate.jpeg" download><img src="IYMC Certificate.jpeg"></a><p>IYMC qualification</p></div>
+            </div>
+
+            <!-- REMAINING 2 -->  
+            
+        </div>
+                </div>
+
+
+        <div id="projects" class="section" style="max-width:650px; margin:30px auto; padding:20px; background:#ffffff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+            <h2 style="text-align:center; color:#2c3e50; margin-bottom:20px;">
+              My Projects
+            </h2>
+            <ul style="list-style:none; padding:0; font-size:16px; color:#333; line-height:1.7;">
+              <li style="margin:12px 0; padding:12px; background:#f9f9f9; border-left:5px solid #1abc9c; border-radius:6px;">
+  <strong style="color:#34495e;">Design Thinking :</strong><br>
+  Natural Detergent
+  <!-- Image added here -->
+  <div style="text-align:center; margin-top:10px;">
+    <img src="Prototype.jpeg" 
+         alt="Natural Detergent"
+         style="width:100%; max-width:250px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+  </div>
+</li>
+           
+ 
+  </div> 
+    <div id="contact" class="section">
+          <div style="max-width:420px; margin:30px auto; padding:25px; background:#1e1e2f; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.4); color:white;">
+          
+            <h2 style="text-align:center; margin-bottom:20px;">Contact Me</h2>
+            <form>
+              <input type="text" placeholder="Your Name" required
+              style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#2c2c3e; color:white;">
+
+              <input type="email" placeholder="Your Email" required
+              style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#2c2c3e; color:white;">
+
+              <textarea placeholder="Your Message" required
+              style="width:100%; padding:10px; margin:10px 0; border:none; border-radius:5px; background:#2c2c3e; color:white; height:100px;"></textarea>
+
+              <button type="submit"
+              style="width:100%; padding:12px; background:#00c6ff; color:white; border:none; border-radius:5px; font-size:16px; cursor:pointer; box-shadow:0 0 10px #00c6ff;">
+              Send Message
+              </button>
+            </form>
+
+          </div>
+        </div>
+        <div id="location" class="section">
+            <center>
+              <h1 style="color: yellow;">My Location</h1>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60532.58671088265!2d76.28961168217234!3d18.515943279531495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc564c2874da837%3A0x6c7830baac7728b5!2sGadwad%2C%20Maharashtra%20413511!5e0!3m2!1sen!2sin!4v1777803341449!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </center>
+        </div>
+
+
+  <footer>
+    <p>© 2026 Prasad Mane | All Rights Reserved</p>
+  </footer>
+
+  <script>
+function showSection(sectionId) {
+    var sections = document.querySelectorAll('.section');
+
+    sections.forEach(function(sec) {
+        sec.style.display = "none";
+    });
+
+    var activeSection = document.getElementById(sectionId);
+
+    // Keep flex layout for resume
+    if(sectionId === "resume") {
+        activeSection.style.display = "flex";
+    } else {
+        activeSection.style.display = "block";
+    }
+}
+</script>
+
+</body>
+
+</html>
